@@ -1,4 +1,12 @@
-export default function Body() {
+
+
+interface BodyProps {
+    username: string;
+    photoURL: string;
+    email: string;
+}
+
+export default function Body({ username, photoURL, email } : BodyProps) {
     return (
         <div className="h-[60rem] bg-teal-100 w-dvw md:max-w-5xl mx-auto mt-10 p-6">
             <div className="p-2">
