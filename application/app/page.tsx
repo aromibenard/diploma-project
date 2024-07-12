@@ -7,6 +7,9 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
+export const dynamic = 'force-dynamic';
+export const maxDuration = 30;
+
 export default function Home() {
   const[loading, setLoading] = useState(true)
   const[authenticated, setAuthenticated] = useState(false)
