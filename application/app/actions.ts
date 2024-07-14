@@ -25,9 +25,10 @@ export async function continueConversation(history: Message[]) {
     const { textStream } = await streamText({
       model: model,
       system:
-        "You are an assistant for a vet clinic that offers firstaid instructions for injury and accidents in animals. You help the vet deal with the injury. Keep your instructions step by step and short",
+        `You are a vet. You identify and provide firstaid instructions for injury and accidents in animals.` +
+        `You walk through the process of administering firstaid based on user input, Keep your instructions step by step and short`,
       messages: history,
-      maxTokens: 1000,
+      maxTokens: 800,
       temperature: 1.1
     });
 

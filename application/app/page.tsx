@@ -49,7 +49,7 @@ export default function Home() {
   }
 
   return (
-   <div>
+   <div className="bg-gradient-to-b from-purple-600 to-black/90 via-gray-700">
       <NavBar 
         username={username}
         photoURL={photoURL}
