@@ -23,14 +23,15 @@ export default function Chat() {
 
   return (
     <div className={'flex flex-col p-4 h-screen'}>
+      <h1 className='m-2 px-2 font-semibold text-xl text-gray-700'>Describe Animal's condition below:</h1>
       <Paper className='flex-1 flex-col overflow-y-auto p-4 mb-4'
         elevation={3}
       >
           {conversation.map((message, index) => (
             <div key={index} 
               className={message.role === 'user' ? 
-               'p-3 justify-end bg-blue-500 inline-block rounded-xl my-2 shadow-md' 
-               : 'p-3 justify-start mb-4 bg-gray-500 my-2 rounded-xl shadow-md'}>
+               'p-3 px-4 justify-end bg-purple-500 inline-block rounded-xl my-2 shadow-md text-white' 
+               : 'p-3 px-4 justify-start mb-4 bg-gray-200 my-2 rounded-xl shadow-md'}>
               {message.role}: {message.content}
             </div>
           ))}
@@ -48,7 +49,7 @@ export default function Chat() {
           />
           <Button
             variant="outlined"
-            className=''
+            className='bg-purple-400'
             onClick={async () => {
               const { messages, newMessage } = await continueConversation([
                 ...conversation,
@@ -68,8 +69,7 @@ export default function Chat() {
               setInput('')
             }}
           >
-            Send Message
-            <span className='mx-2'><Send/></span>
+            <Send/>
           </Button>
         </div>
 
