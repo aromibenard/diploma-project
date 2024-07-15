@@ -10,7 +10,7 @@ export interface BodyProps {
 
 export default function Body({ username, photoURL, email } : BodyProps) {
     return (
-        <div className=" bg-yellow-50 w-dvw md:max-w-5xl mx-auto mt-10 p-6">
+        <div className=" bg-yellow-50 w-dvw md:max-w-5xl mx-auto p-6 pt-14">
             <div className="">
                 <Grid username={username}/>
             </div>

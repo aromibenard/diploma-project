@@ -1,6 +1,7 @@
 'use client'
 
 import Body from "@/components/Body";
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import { auth } from "@/firebase";
 import { onAuthStateChanged } from "firebase/auth";
@@ -49,7 +50,7 @@ export default function Home() {
   }
 
   return (
-   <div className="bg-gradient-to-b from-purple-600 to-black/90 via-gray-700">
+   <div className="bg-gradient-to-b from-purple-300 to-black/90 via-gray-700">
       <NavBar 
         username={username}
         photoURL={photoURL}
@@ -60,6 +61,7 @@ export default function Home() {
         photoURL={photoURL}
         email={email}
       />
+      <Footer/>
    </div>
   )
 }

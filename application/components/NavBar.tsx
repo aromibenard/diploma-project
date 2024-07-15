@@ -38,8 +38,8 @@ export default function NavBar ({ username, photoURL, email} : NavBarProps)  {
     }
     
     return (
-        <div className="flex w-full justify-around p-1.5 fixed bg-emerald-500 top-0 left-0 z-50 shadow-sm shadow-black/10 items-center opacity-90 backdrop-blur-md">
-            <h1 className="font-extrabold">VetAssist</h1>
+        <div className="flex w-full justify-around p-1.5 fixed top-0 left-0 z-50 shadow-sm shadow-black/10 items-center opacity-90 backdrop-blur-sm">
+            <h1 className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500 drop-shadow-md">VetAssist</h1>
             <NavMenu />
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
