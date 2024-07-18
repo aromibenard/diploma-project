@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <Paper className="w-dvw md:max-w-5xl mx-auto p-4 my-4 border-2 border-purple-500" elevation={3} >
+        <Paper className="w-dvw md:max-w-5xl mx-auto p-4 my-4 border-2 border-purple-500" elevation={10} >
             <div className="grid items-center grid-cols-4 gap-4 font-medium text-gray-600">
                 <div className="flex flex-col items-center border-r-2 border-purple-500">
                     <Link href="/">Home</Link>
