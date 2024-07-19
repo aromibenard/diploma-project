@@ -26,7 +26,7 @@ export default function Chat() {
   return (
     <div className={'flex flex-col p-4 my-3'}>
       <Tabs defaultValue="chat" className="w-full h-full" color='purple'>
-          <TabsList>
+          <TabsList className='bg-purple-200'>
             <TabsTrigger value="chat">First Aid</TabsTrigger>
             <TabsTrigger value="illustration">Illustrations</TabsTrigger>
           </TabsList> 
