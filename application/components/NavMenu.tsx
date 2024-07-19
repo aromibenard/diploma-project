@@ -37,10 +37,36 @@ const components: { title: string; href: string; description: string }[] = [
 ]
 
 export function NavMenu() {
+  
+  const MobileMenuItem: React.FC<{ href: string; title: string }> = ({ href, title }) => (
+    <li>
+      <NavigationMenuLink asChild>
+        <a className="block py-2 px-4 text-gray-800 hover:bg-violet-200" href={href}>
+          {title}
+        </a>
+      </NavigationMenuLink>
+    </li>
+  )
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        <NavigationMenuItem>
+        
+        {/* Hamburger Menu*/}
+        <NavigationMenuItem className="md:hidden">
+          <NavigationMenuTrigger className="bg-transparent text-gray-700">Menu</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="p-4">
+              <MobileMenuItem href="/" title="Home" />
+              <MobileMenuItem href="/services" title="Services" />
+              <MobileMenuItem href="/resources" title="Resources" />
+              <MobileMenuItem href="/contact" title="Contact Us" />
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+
+        {/* Full Navbar*/}
+        <NavigationMenuItem className="hidden md:block">
           <NavigationMenuTrigger className="bg-transparent text-gray-700">Getting started</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -71,7 +97,7 @@ export function NavMenu() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hidden md:block">
           <NavigationMenuTrigger className="bg-transparent text-gray-700">About Us</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -87,7 +113,7 @@ export function NavMenu() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hidden md:block">
           <Link href="/contact" legacyBehavior passHref>
             <NavigationMenuLink className={`${navigationMenuTriggerStyle()} bg-transparent text-gray-700`}>
               Contact
