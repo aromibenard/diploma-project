@@ -18,12 +18,12 @@ export default function Grid({ username } : GridProps) {
                     Welcome to VetAssist<span className="font-semibold text-gray-800">{username ? `, ${username}` : ''}.</span> Get first aid instructions for any injuries
                     or accidents involving pets and farm animals.
                 </p>
-                <p className="text-center text-lg flex items-center font-semibold text-gray-600">Get started by describing the accident/injury in the chatbox below 
+                <p className="text-center text-lg flex items-center font-semibold text-gray-600 my-5 md:my-1">Get started by describing the accident/injury in the chatbox below 
                     <span className="mx-1 font-bold">
                         <ArrowDownIcon color="purple" className="hidden md:inline-block" />
                     </span>
                 </p>
-                <div className="flex items-center mt-3 space-x-4 pt-6">
+                <div className="flex items-center mt-3 space-x-5 pt-6">
                     <Facebook sx={ {height: 35 , width: 35 , color: 'purple'}}/>
                     <Twitter sx={ {height: 35 , width: 35 , color: 'purple'}}/>
                     <Instagram sx={ {height: 35 , width: 35 , color: 'purple'}}/>

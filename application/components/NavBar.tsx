@@ -1,41 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavMenu } from "./NavMenu";
 import { Avatar } from "@mui/material";
 import { DropdownMenu, 
     DropdownMenuContent,
     DropdownMenuGroup, 
     DropdownMenuItem,
-    DropdownMenuLabel, 
-    DropdownMenuPortal, 
+    DropdownMenuLabel,  
     DropdownMenuSeparator, 
-    DropdownMenuShortcut,
-    DropdownMenuSub, 
-    DropdownMenuSubContent, 
-    DropdownMenuSubTrigger, 
+    DropdownMenuShortcut, 
     DropdownMenuTrigger } from "./ui/dropdown-menu";
-import { CreditCard, Settings, Keyboard, Mail, Cloud, Logout } from "@mui/icons-material";
+import { CreditCard, Settings, Logout } from "@mui/icons-material";
 import { signOut } from "firebase/auth";
 import { auth } from "@/firebase";
 import { useRouter } from "next/navigation";
+import Loader from "./Loader";
 
 
 interface NavBarProps {
-    username: string;
-    photoURL: string;
-    email: string;
+    username?: string;
+    photoURL?: string;
+    email?: string;
 }
 
-export default function NavBar ({ username, photoURL, email} : NavBarProps)  {
+export default function NavBar ({ username, photoURL} : NavBarProps)  {
 
     const router = useRouter();
+    const [loading, setLoading] = useState(false)
+
 
     const logout = async () => {
+        setLoading(true)
         signOut(auth).then(() => {
             router.push("/auth/login");
+            setLoading(false)
           }).catch((error) => {
             // An error happened.
         })
     }
+
+    if(loading) return <Loader />
     
     return (
         <div className="flex w-full justify-around p-1.5 fixed top-0 left-0 z-50 shadow-sm shadow-black/10 items-center opacity-90 backdrop-blur-sm">

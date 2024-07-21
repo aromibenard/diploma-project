@@ -26,13 +26,13 @@ export default function Chat() {
   return (
     <div className={'flex flex-col p-4 my-3'}>
       <Tabs defaultValue="chat" className="w-full h-full" color='purple'>
-          <TabsList className='bg-purple-200'>
-            <TabsTrigger value="chat">First Aid</TabsTrigger>
+          <TabsList className='bg-violet-200'>
+            <TabsTrigger value="chat" className=''>First Aid</TabsTrigger>
             <TabsTrigger value="illustration">Illustrations</TabsTrigger>
           </TabsList> 
           <TabsContent value="chat">  
-            <h1 className='m-2 px-2 font-semibold text-xl text-gray-700'>Describe Animal's condition below:</h1>
-            <Paper className='flex-1 flex-col overflow-y-auto p-4 mb-4'
+            <h1 className='m-2 px-2 font-semibold text-xl text-gray-700'>Describe Animal&apos;s condition below:</h1>
+            <Paper className='flex-1 flex-col overflow-y-auto p-4 mb-4 h-[26rem]'
               elevation={3}
             >
                 {conversation.map((message, index) => (
@@ -47,7 +47,7 @@ export default function Chat() {
             </Paper>
             <div className='flex w-full space-x-4 p-4'>
               <Input
-                placeholder="Describe injury or accident"
+                placeholder="try cuts on dogs ears"
                 type="text"
                 value={input}
                 onChange={event => {

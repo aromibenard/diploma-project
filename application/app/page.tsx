@@ -2,6 +2,7 @@
 
 import Body from "@/components/Body";
 import Footer from "@/components/Footer";
+import Loader from "@/components/Loader";
 import NavBar from "@/components/NavBar";
 import { auth } from "@/firebase";
 import { onAuthStateChanged } from "firebase/auth";
@@ -46,7 +47,7 @@ export default function Home() {
   }, [loading, authenticated, router])
 
   if (loading) {
-    return 
+    return <Loader />
   }
 
   return (

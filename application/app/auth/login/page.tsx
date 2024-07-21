@@ -5,16 +5,20 @@ import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { signInWithPopup } from "firebase/auth";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import Loader from "@/components/Loader";
 
 export default function Login() {
     const router = useRouter()
+    const [loading, setLoading] = useState(false)
 
     async function login() {
-
+        setLoading(true)
         return signInWithPopup(auth, provider)
         .then(() => {
 
             router.push('/')
+            setLoading(false)
 
         }).catch((error) => {
             const errorCode = error.code
@@ -24,6 +28,8 @@ export default function Login() {
         })
 
     }
+
+    if(loading) return <Loader />
 
     return (
         <div className="min-h-screen min-w-screen grid bg-violet-200 justify-center">

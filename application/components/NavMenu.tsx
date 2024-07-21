@@ -58,7 +58,7 @@ export function NavMenu() {
           <NavigationMenuContent>
             <ul className="p-4">
               <MobileMenuItem href="/" title="Home" />
-              <MobileMenuItem href="/services" title="Services" />
+              {/* <MobileMenuItem href="/services" title="Services" /> */}
               <MobileMenuItem href="/resources" title="Resources" />
               <MobileMenuItem href="/contact" title="Contact Us" />
             </ul>
