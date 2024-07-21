@@ -50,7 +50,7 @@ export default function Home() {
   }
 
   return (
-   <div className="bg-gradient-to-b from-purple-300 to-black/90 via-gray-700">
+   <div className="w-dvw bg-gradient-to-b from-purple-300 to-black/90 via-gray-700">
       <NavBar 
         username={username}
         photoURL={photoURL}
