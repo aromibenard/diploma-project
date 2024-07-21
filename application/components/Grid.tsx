@@ -14,13 +14,13 @@ export default function Grid({ username } : GridProps) {
             <div className="flex flex-col items-center mt-12">
                 <p className="my-1 text-gray-600">The Animal FirstAid Guide</p>
                 <h1 className="font-extrabold text-5xl bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500 drop-shadow-lg">VetAssist</h1>
-                <p className="z-50 px-4 mt-5 text-center text-lg font-medium text-gray-600 mx-auto ">
+                <p className="px-4 mt-5 md:text-center md:text-lg font-medium text-gray-600 mx-auto ">
                     Welcome to VetAssist<span className="font-semibold text-gray-800">{username ? `, ${username}` : ''}.</span> Get first aid instructions for any injuries
                     or accidents involving pets and farm animals.
                 </p>
-                <p className="text-left text-lg flex items-center font-medium text-gray-600">Get started by describing the accident/injury in the chatbox below 
+                <p className="text-center text-lg flex items-center font-semibold text-gray-600">Get started by describing the accident/injury in the chatbox below 
                     <span className="mx-1 font-bold">
-                        <ArrowDownIcon color="purple" className="" />
+                        <ArrowDownIcon color="purple" className="hidden md:inline-block" />
                     </span>
                 </p>
                 <div className="flex items-center mt-3 space-x-4 pt-6">

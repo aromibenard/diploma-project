@@ -11,11 +11,11 @@ export default function Footer() {
                     <Link href="/about">About</Link>
                     <Link href="/contact">Contact</Link>
                 </div>
-                <div className="flex flex-col items-center border-r-2 border-purple-500">
+                <div className="flex flex-col items-center md:border-r-2 md:border-purple-500">
                     <Link href="/terms">Terms of Use</Link>
                     <Link href="/privacy">Privay Policy</Link>
                 </div>
-                <div className="flex flex-col items-center md:border-r-2 md:border-purple-500 ">
+                <div className="flex flex-col items-center border-r-2 border-purple-500 ">
                     <Link href="/services">Services</Link>
                     <Link href="/resources">Resources</Link>
                     <Link href="/newsletter">Newsletter</Link>

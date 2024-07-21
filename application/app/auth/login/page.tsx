@@ -39,9 +39,7 @@ export default function Login() {
                             onClick={login}
                             className=" flex items-center hover:scale-105 transition"
                         >Sign In With Google <span className="mx-3 flex items-center"><Google/></span></Button>
-
                 </div>
-
             </div>
         </div>
     )
